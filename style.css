@@ -1,0 +1,165 @@
+body{
+
+	display: grid;
+	grid-template-columns: 100% auto  ;
+	grid-template-rows: auto;
+	grid-template-areas: "head head "
+						" main main "
+						"footer footer";
+
+		/*need to understand how grid template areas work*/
+
+}
+
+header, main, footer, aside 
+{
+	text-align:center;
+
+}
+
+/*#main_section*/
+/*form*/
+#main_section
+{
+	border: 2px solid;
+	border-radius: 15px;
+	width: 300px;
+	padding: 50px 50px;
+	grid-area: main; 
+	background: lightgrey ;
+	margin: 100px auto;
+	display: inline-block;
+	/*margin-left: 70px;
+	margin-right: 70px;
+	margin-top: 40px;
+	margin-bottom: 40px;*/
+
+	
+}
+
+
+#home_main{
+	grid-area: main; 
+
+
+}
+
+/*#personal*/
+#person
+{
+	grid-area: main;
+	margin: 30px;
+ 	/*border:2px solid purple;*/
+ 	padding: 30px;
+ 	width: 400px;
+ 	height: 200px;
+ 	display: inline-block;
+}
+
+#hobby
+{
+	
+
+	margin: 30px;
+ 	/*border:2px solid purple;*/
+ 	padding: 30px;
+ 	width: 400px;
+ 	height: 200px;
+ 	display: inline-block;
+ 	float: right;
+}
+
+#my_img{
+
+	margin: 30px;
+ 	/*border:2px solid purple;*/
+ 	padding: 30px;
+ 	width: 25%
+ 	height: 100px;
+ 	display: inline-block;
+ 	/*float: left;*/
+
+ 	
+ 	
+}
+
+#pro_sum{
+	margin: 30px;
+ 	/*border:2px solid purple;*/
+ 	padding: 30px;
+ 	width: 400px;
+ 	height: 200px;
+ 	display: inline-block;
+ 	float: right;
+
+}
+
+/*#pro_id
+{
+	text-align: left;
+}
+
+#per_id
+{
+	text-align: left;
+}
+*/
+
+aside
+{
+	grid-area: aside; 
+}
+
+header{
+	grid-area: head ;
+	background:lightgrey;
+
+
+	
+}
+#logut
+{
+	grid-area: head;
+		float: right;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		display: inline-block;
+
+}
+footer 
+{grid-area: footer;
+	background:lightgrey;
+	
+	
+}
+#uid, #pwd, #c_pwd
+{
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 20px 0;
+ display: inline-block;
+
+}
+/*#uid{
+	position: relative;
+	left: 15px;
+}
+#pwd
+{position: relative;
+left: 9px}
+
+#c_pwd
+{
+position: relative;
+}*/
+
+li
+{
+	display: inline;
+	/*margin-bottom: 40px;*/
+	padding: 40px;
+}
+
+.wrong-input{
+	border: 1px solid red; 
+}

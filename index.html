@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+	<script type="text/javascript">
+		function checkdemo()
+		{
+			var	uid = document.forms["login_form"]["userid"].value;
+			var pwd = document.forms["login_form"]["password"].value;
+			var cpwd = document.forms["login_form"]["c_pwd"].value;
+			if (uid == "") 
+			{ 
+				
+				alert("User id cannot be blank");
+				document.forms["login_form"]["uid"].setAttribute("class", "wrong-input");
+				return false;
+			}
+			if (pwd=="")
+			{
+				alert("password cannot be blank");
+				document.forms["login_form"]["pwd"].setAttribute("class", "wrong-input");
+				return false;
+			}else if (pwd.length <8)
+				{
+					alert("Password cannot be less than 8 characters");
+					document.forms["login_form"]["pwd"].setAttribute("class", "wrong-input");
+					return false;
+				}else if (cpwd!=pwd)
+				{
+					alert ("Password and Confirm Password does not match");
+					//document.forms["login_form"]["cpwd"].setAttribute("class", "wrong-input");
+					//document.forms["login_form"]["cpwd"].setAttribute("class", "wrong-input");
+					return false;
+				}
+			alert ("User id is: " +uid+ " " +"Password is : "+pwd);
+		}
+
+	</script>
+
+</head>
+<body>
+	<header id='login_head'>
+		<h2>Login Page</h2>
+	</header>
+	<aside></aside>
+	<main id = "main_section">
+		<form method = "POST" id="login_form" action =./home.html onsubmit="return checkdemo()">
+			<label for="user id ">User Id</label>
+			<input type="email" name="userid" id="uid" placeholder="User ID">
+			<br><br>
+			<label for = "password">Password</label>
+			<input type="password" name="password" id="pwd" placeholder="Password">
+			<br><br>
+			<label for = "password">ConfirmPassword</label>
+			<input type="password" name="confirm_password" id="c_pwd" placeholder="Confirm Password">
+			<br><br>
+			<input type="submit" name="submit" value="Sign up">
+
+		</form>
+	</main>
+	
+	
+	<footer>@Copyright</footer>
+</body>
+</html>
